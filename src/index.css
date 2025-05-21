@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-netflix-black text-white font-sans antialiased;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply container mx-auto px-4;
+  }
+  
+  .btn-primary {
+    @apply bg-netflix-red hover:bg-red-700 text-white font-bold py-2 px-4 rounded transition-colors duration-300;
+  }
+  
+  .btn-secondary {
+    @apply bg-netflix-light-gray hover:bg-gray-700 text-white font-bold py-2 px-4 rounded transition-colors duration-300;
+  }
+  
+  .movie-card {
+    @apply relative overflow-hidden rounded-md transition-transform duration-300 hover:scale-105 hover:z-10;
+  }
+  
+  .movie-title {
+    @apply font-bold text-lg;
+  }
+  
+  .section-title {
+    @apply text-2xl font-bold mb-4;
+  }
+  
+  .navbar {
+    @apply bg-gradient-to-b from-black to-transparent fixed top-0 w-full z-50 transition-all duration-300;
+  }
+  
+  .navbar-scrolled {
+    @apply bg-netflix-black shadow-md;
+  }
+  
+  .carousel-item {
+    @apply relative h-[70vh] bg-cover bg-center;
+  }
+  
+  .carousel-content {
+    @apply absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black to-transparent;
+  }
+  
+  .loading-spinner {
+    @apply animate-spin h-10 w-10 border-4 border-netflix-red border-t-transparent rounded-full;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-netflix-black;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-netflix-light-gray rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-netflix-red;
+}
