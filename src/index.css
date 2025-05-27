@@ -46,7 +46,7 @@
   }
   
   .carousel-content {
-    @apply absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black to-transparent;
+    @apply absolute bottom-0 left-0 right-0 p-8;
   }
   
   .loading-spinner {

@@ -29,6 +29,16 @@ const Navbar = () => {
     }
   };
 
+  // Handle logout
+  const handleLogout = () => {
+    const returnUrl = `${window.location.origin}`;
+    logout({
+      logoutParams: {
+        returnTo: returnUrl
+      }
+    });
+  };
+
   return (
     <nav className={`navbar ${isScrolled ? 'navbar-scrolled' : ''}`}>
       <div className="container-custom py-4 flex items-center justify-between">
@@ -71,7 +81,7 @@ const Navbar = () => {
                 className="w-8 h-8 rounded-full mr-2"
               />
               <button
-                onClick={() => logout({ returnTo: window.location.origin })}
+                onClick={handleLogout}
                 className="btn-secondary text-sm py-1 px-3"
               >
                 Salir
